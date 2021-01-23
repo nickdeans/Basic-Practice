@@ -1,0 +1,17 @@
+* {
+    background-color: aquamarine;
+}
+
+h1 {
+    color: brown;
+    background-color: chartreuse;
+    border: coral 5px solid;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.questions {
+    background-color: burlywood;
+    border-radius: 25px;
+}
