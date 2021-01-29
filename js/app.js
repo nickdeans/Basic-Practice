@@ -1,7 +1,52 @@
 'use strict';
 
-var userScore = 0;
+var tbodyParent = document.getElementById('table');
+var allAnimals = [];
 
+function Amimal(name, type, color, age){
+    this.name = name;
+    this.type = type;
+    this.color = color;
+    this.age = age;
+
+    allAnimals.push(this);
+}
+
+
+function generateHeader(){
+    var trElement = document.createElement('tr');
+    var thElement = document.createElement('th');
+    thElement.textContent = 'Name';
+    tbodyParent.appendChild(thElement);
+    trElement.appendChild(thElement);
+    
+    thElement = document.createElement('th');
+    thElement.textContent = 'Type';
+    trElement.appendChild(thElement);
+    
+    thElement = document.createElement('th');
+    thElement.textContent = 'Color';
+    trElement.appendChild(thElement);
+    
+    thElement = document.createElement('th');
+    thElement.textContent = 'Age';
+    trElement.appendChild(thElement);
+};
+
+Amimal.prototype.render = function(){
+    var trowTwo = document.createElement('tr');
+    tbodyParent.appendChild(trowTwo);
+    var tdrowTwo = document.createElement('td');
+    tdrowTwo.textContent = this.name;
+}
+
+var spot = new Animal('spot', 'cat', 'orange', 2)
+var spark = new Animal('spark', 'dog', 'black', 3)
+
+generateHeader();
+spot.render();
+
+var userScore = 0;
 
 // alert(userName + ' is an awesome color!');
 
