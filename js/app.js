@@ -115,3 +115,30 @@ pizzaMan();
 location();
 sushiQuestions();
 userScoreFunc();
+
+var peopleArray = [];
+var formElement = document.getElementById('form');
+
+function Person(name, story, likesIceCream){
+    this.name = name;
+    this.story = story;
+    this.likesIceCream = likesIceCream;
+
+    peopleArray.push(this);
+}
+
+new Person('Bob', 'drives a car', 'yes');
+new Person('James', 'owns a ice cream shop', 'yes');
+new Person('Frank', 'never eats ice cream', 'no');
+
+function bananas(e){
+    e.preventDefault();
+
+    var personName = e.target.username.value;
+    var story = e.target.story.value;
+    var likesIceCream = e.target.icecream.value;
+
+    new Person(personName, story, likesIceCream);
+}
+
+formElement.addEventListener('submit', bananas);
