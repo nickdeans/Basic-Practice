@@ -34,3 +34,26 @@ li {
     border: solid 5px sandybrown;
     box-sizing: border-box;
 }
+
+@media(min-width: 780px){
+    main {
+        background-color: steelblue;
+    }
+
+    li {
+        background-color: teal;
+        border: slateblue 5px dashed;
+        color: snow;
+    }
+
+    h1{
+        border: tomato 3px solid;
+        color: wheat;
+        background-color: slategray;
+    }
+
+    form table{
+        background-color: violet;
+    }
+
+}

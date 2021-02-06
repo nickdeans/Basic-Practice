@@ -116,29 +116,50 @@ location();
 sushiQuestions();
 userScoreFunc();
 
-var peopleArray = [];
-var formElement = document.getElementById('form');
+// var peopleArray = [];
+// var formElement = document.getElementById('form');
 
-function Person(name, story, likesIceCream){
-    this.name = name;
-    this.story = story;
-    this.likesIceCream = likesIceCream;
+// function Person(name, story, likesIceCream){
+//     this.name = name;
+//     this.story = story;
+//     this.likesIceCream = likesIceCream;
 
-    peopleArray.push(this);
+//     peopleArray.push(this);
+// }
+
+// new Person('Bob', 'drives a car', 'yes');
+// new Person('James', 'owns a ice cream shop', 'yes');
+// new Person('Frank', 'never eats ice cream', 'no');
+
+// function bananas(e){
+//     e.preventDefault();
+
+//     var personName = e.target.username.value;
+//     var story = e.target.story.value;
+//     var likesIceCream = e.target.icecream.value;
+
+//     new Person(personName, story, likesIceCream);
+// }
+
+// formElement.addEventListener('submit', bananas);
+
+const candy = ['chocolate', 'mint', 'coffee bean'];
+
+candy.forEach(eat);
+candy.forEach(eatSome);
+
+function eat(candyName){
+    console.log(`I like ${candyName}`);
 }
 
-new Person('Bob', 'drives a car', 'yes');
-new Person('James', 'owns a ice cream shop', 'yes');
-new Person('Frank', 'never eats ice cream', 'no');
-
-function bananas(e){
-    e.preventDefault();
-
-    var personName = e.target.username.value;
-    var story = e.target.story.value;
-    var likesIceCream = e.target.icecream.value;
-
-    new Person(personName, story, likesIceCream);
+function eatSome(candyName, count){
+    console.log(`I ate some ${count} ${candyName}`);
 }
 
-formElement.addEventListener('submit', bananas);
+function eatSomeWantOthers(candyName, count, candies){
+    console.log(`I ate ${count} ${candyName} and I want ${candies}`);
+}
+
+candy.forEach(pieces => {
+    console.log(`Would you like to share a ${piece}`)
+});
