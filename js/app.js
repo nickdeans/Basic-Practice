@@ -1,52 +1,52 @@
-'use strict';
+// 'use strict';
 
-var tbodyParent = document.getElementById('table');
-var allAnimals = [];
+// var tbodyParent = document.getElementById('table');
+// var allAnimals = [];
 
-function Amimal(name, type, color, age){
-    this.name = name;
-    this.type = type;
-    this.color = color;
-    this.age = age;
+// function Amimal(name, type, color, age){
+//     this.name = name;
+//     this.type = type;
+//     this.color = color;
+//     this.age = age;
 
-    allAnimals.push(this);
-}
+//     allAnimals.push(this);
+// }
 
 
-function generateHeader(){
-    var trElement = document.createElement('tr');
-    var thElement = document.createElement('th');
-    thElement.textContent = 'Name';
-    tbodyParent.appendChild(thElement);
-    trElement.appendChild(thElement);
+// function generateHeader(){
+//     var trElement = document.createElement('tr');
+//     var thElement = document.createElement('th');
+//     thElement.textContent = 'Name';
+//     tbodyParent.appendChild(thElement);
+//     trElement.appendChild(thElement);
     
-    thElement = document.createElement('th');
-    thElement.textContent = 'Type';
-    trElement.appendChild(thElement);
+//     thElement = document.createElement('th');
+//     thElement.textContent = 'Type';
+//     trElement.appendChild(thElement);
     
-    thElement = document.createElement('th');
-    thElement.textContent = 'Color';
-    trElement.appendChild(thElement);
+//     thElement = document.createElement('th');
+//     thElement.textContent = 'Color';
+//     trElement.appendChild(thElement);
     
-    thElement = document.createElement('th');
-    thElement.textContent = 'Age';
-    trElement.appendChild(thElement);
-};
+//     thElement = document.createElement('th');
+//     thElement.textContent = 'Age';
+//     trElement.appendChild(thElement);
+// };
 
-Amimal.prototype.render = function(){
-    var trowTwo = document.createElement('tr');
-    tbodyParent.appendChild(trowTwo);
-    var tdrowTwo = document.createElement('td');
-    tdrowTwo.textContent = this.name;
-}
+// Amimal.prototype.render = function(){
+//     var trowTwo = document.createElement('tr');
+//     tbodyParent.appendChild(trowTwo);
+//     var tdrowTwo = document.createElement('td');
+//     tdrowTwo.textContent = this.name;
+// }
 
-var spot = new Animal('spot', 'cat', 'orange', 2)
-var spark = new Animal('spark', 'dog', 'black', 3)
+// var spot = new Animal('spot', 'cat', 'orange', 2)
+// var spark = new Animal('spark', 'dog', 'black', 3)
 
-generateHeader();
-spot.render();
+// generateHeader();
+// spot.render();
 
-var userScore = 0;
+// var userScore = 0;
 
 // alert(userName + ' is an awesome color!');
 
@@ -63,58 +63,58 @@ var userScore = 0;
 // } else{
 //     console.log('nick likes brown');
 // }
-function pizzaMan() {
-    var pizza = prompt('Do you like pizza?');
-    if(pizza.toLowerCase() === 'yes'){
-        alert('nick likes pizza');
-        userScore++;
-    } else if(pizza.toLowerCase() === 'no'){
-        alert('nick does not like pizza');
-    } else{
-        alert('please answer with yes or no');
-    }
-};
+// function pizzaMan() {
+//     var pizza = prompt('Do you like pizza?');
+//     if(pizza.toLowerCase() === 'yes'){
+//         alert('nick likes pizza');
+//         userScore++;
+//     } else if(pizza.toLowerCase() === 'no'){
+//         alert('nick does not like pizza');
+//     } else{
+//         alert('please answer with yes or no');
+//     }
+// };
 
-function location() {
-    var locationFrom = prompt('Am I from Long Beach?');
-    if(locationFrom.toLowerCase() === 'yes'){
-        alert('You got it!');
-        userScore++;
-    } else if(locationFrom.toLowerCase() === 'no'){
-        alert('you got it wrong');
-    } else{
-        alert('please answer with yes or no');
-    }
-};
+// function location() {
+//     var locationFrom = prompt('Am I from Long Beach?');
+//     if(locationFrom.toLowerCase() === 'yes'){
+//         alert('You got it!');
+//         userScore++;
+//     } else if(locationFrom.toLowerCase() === 'no'){
+//         alert('you got it wrong');
+//     } else{
+//         alert('please answer with yes or no');
+//     }
+// };
 
-function sushiQuestions() {
-    var sushi = prompt('Do I like sushi?');
-    if(sushi.toLowerCase() === 'yes'){
-        alert('Yes I like sushi!');
-        userScore++;
-    } else if(sushi.toLowerCase() === 'no'){
-        alert('you got it wrong');
-    } else{
-        alert('please answer with yes or no');
-    }
-};
+// function sushiQuestions() {
+//     var sushi = prompt('Do I like sushi?');
+//     if(sushi.toLowerCase() === 'yes'){
+//         alert('Yes I like sushi!');
+//         userScore++;
+//     } else if(sushi.toLowerCase() === 'no'){
+//         alert('you got it wrong');
+//     } else{
+//         alert('please answer with yes or no');
+//     }
+// };
 
-function userScoreFunc() {
-    if(userScore === 0){
-        alert('you got em all wrong!');
-    }else if(userScore === 1){
-        alert('you got 1 of 3');
-    }else if(userScore === 2){
-        alert('you got 2 of 3');
-    }else if(userScore === 3){
-        alert('you got all 3!');
-    }
-};
+// function userScoreFunc() {
+//     if(userScore === 0){
+//         alert('you got em all wrong!');
+//     }else if(userScore === 1){
+//         alert('you got 1 of 3');
+//     }else if(userScore === 2){
+//         alert('you got 2 of 3');
+//     }else if(userScore === 3){
+//         alert('you got all 3!');
+//     }
+// };
 
-pizzaMan();
-location();
-sushiQuestions();
-userScoreFunc();
+// pizzaMan();
+// location();
+// sushiQuestions();
+// userScoreFunc();
 
 // var peopleArray = [];
 // var formElement = document.getElementById('form');
@@ -143,23 +143,23 @@ userScoreFunc();
 
 // formElement.addEventListener('submit', bananas);
 
-const candy = ['chocolate', 'mint', 'coffee bean'];
+// const candy = ['chocolate', 'mint', 'coffee bean'];
 
-candy.forEach(eat);
-candy.forEach(eatSome);
+// candy.forEach(eat);
+// candy.forEach(eatSome);
 
-function eat(candyName){
-    console.log(`I like ${candyName}`);
-}
+// function eat(candyName){
+//     console.log(`I like ${candyName}`);
+// }
 
-function eatSome(candyName, count){
-    console.log(`I ate some ${count} ${candyName}`);
-}
+// function eatSome(candyName, count){
+//     console.log(`I ate some ${count} ${candyName}`);
+// }
 
-function eatSomeWantOthers(candyName, count, candies){
-    console.log(`I ate ${count} ${candyName} and I want ${candies}`);
-}
+// function eatSomeWantOthers(candyName, count, candies){
+//     console.log(`I ate ${count} ${candyName} and I want ${candies}`);
+// }
 
-candy.forEach(pieces => {
-    console.log(`Would you like to share a ${piece}`)
-});
+// candy.forEach(pieces => {
+//     console.log(`Would you like to share a ${piece}`)
+// });
