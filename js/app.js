@@ -1,4 +1,90 @@
-// 'use strict';
+'use strict';
+
+// .sort method practice
+const numberLine = [1,3,7,5,9,2];
+const sortNumbers = (leftNumber, rightNumber) => {
+    if(leftNumber>rightNumber){
+        return 1
+    }else if(leftNumber<rightNumber){
+        return -1
+    }else{
+        return 0
+    }
+};
+numberLine.sort(sortNumbers);
+
+const nameLine = ['nick', 'tom', 'mike', 'bobo', 'jim', 'Bobp'];
+const sortNames = (leftName, rightName) => {
+    if(leftName.toLowerCase()>rightName.toLowerCase()){
+        return 1
+    }else if(leftName.toLowerCase()<rightName.toLowerCase()){
+        return -1
+    }else{
+        return 0
+    }
+};
+nameLine.sort(sortNumbers);
+
+const studentNames = [
+  {name: 'nick',
+  superpower: {
+    name: 'flight',
+    level: {
+      scale:1,
+      rarity:7
+    }
+  }},
+  {name: 'bob',
+  superpower: {
+    name: 'flight',
+    level: {
+      scale:19,
+      rarity:7
+    }
+  }},
+  {name: 'jim',
+  superpower: {
+    name: 'flight',
+    level: {
+      scale:18,
+      rarity:7
+    }
+  }},
+  {name: 'mike',
+  superpower: {
+    name: 'flight',
+    level: {
+      scale:9,
+      rarity:7
+    }
+  }},
+  {name: 'James',
+  superpower: {
+    name: 'flight',
+    level: {
+      scale:10,
+      rarity:7
+    }
+  }},
+  {name: 'Hope',
+  superpower: {
+    name: 'flight',
+    level: {
+      scale:2,
+      rarity:7
+    }
+  }},
+]
+
+studentNames.sort((leftName, rightName) => {
+  if(leftName.superpower.level.scale>rightName.superpower.level.scale){
+    return 1
+  }else if(leftName.superpower.level.scale<rightName.superpower.level.scale){
+    return -1
+  }else{
+    return 0
+  }
+})
 
 // var tbodyParent = document.getElementById('table');
 // var allAnimals = [];
